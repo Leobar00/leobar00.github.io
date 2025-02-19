@@ -28,8 +28,8 @@ gltfLoader.setDRACOLoader(dracoLoader)
 
 let mixer = null
 
-gltfLoader.load(
-    '/models/panchina.glb',
+gltfLoader.load( 
+    '/models/cv.glb',
     (gltf) =>
     {
         scene.add(gltf.scene)
