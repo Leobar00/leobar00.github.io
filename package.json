@@ -3,7 +3,9 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
-    "dev": "webpack serve --config ./bundler/webpack.dev.js"
+    "dev": "webpack serve --config ./bundler/webpack.dev.js",
+    "predeploy": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
@@ -12,10 +14,10 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.5.0",
-    "lil-gui": "^0.11.0",
     "file-loader": "^6.2.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "lil-gui": "^0.11.0",
     "mini-css-extract-plugin": "^2.4.3",
     "portfinder-sync": "0.0.2",
     "raw-loader": "^4.0.2",
@@ -25,5 +27,8 @@
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0",
     "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
